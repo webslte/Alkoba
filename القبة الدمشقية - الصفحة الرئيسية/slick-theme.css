@@ -1,0 +1,115 @@
+@charset "utf-8";
+.main_carousel {
+	width: 100%;
+	height: 420px;
+	direction: ltr !important;
+}
+.main_carousel_slides {
+  position: relative;
+}
+.main_carousel_slides .main_carousel_slide {
+	max-width: 1140px;
+	width: 100%;
+	/* width: 100%; */
+	margin-left: 10px;
+	margin-right: 10px;
+	opacity: 0.6;
+	transition: all 1s ease-in-out;
+}
+.open_category_or_item {
+	border-radius: 1rem;
+	overflow: hidden;
+	height: 420px;
+	background-color: #ffffff;
+}
+.main_carousel_slides .main_carousel_slide .open_category_or_item img {
+	object-fit: cover;
+}
+.main_carousel_slides .main_carousel_slide.slick-current.slick-active {
+	opacity: 1;
+}
+.main_carousel_slides .slick-dots {
+    list-style: none;
+    position: absolute;
+    display: block;
+    width: fit-content;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    bottom: 16px;
+    padding-left: 0px;
+}
+.main_carousel_slides .slick-dots li {
+    display: inline-block;
+    cursor: pointer;
+    width: fit-content;
+    height: fit-content;
+    margin: 0 3px;
+}
+.main_carousel_slides .slick-dots li:only-child {
+    display: none;
+}
+.main_carousel_slides .slick-dots li button {
+    font-size: 0;
+    padding: 5px;
+    cursor: pointer;
+    color: transparent;
+    border: 0;
+    outline: none;
+    background-color: #fff;
+    border-radius: 50%;
+    height: 8px;
+    width: 8px;
+    transition: all .33s ease-in-out;
+}
+.main_carousel_slides .slick-dots li.slick-active button {
+    width: 26px;
+    border-radius: 5px;
+}
+
+
+
+@media screen and (max-width: 1199.98px) {
+	.main_carousel, .open_category_or_item {
+    height: 305px;
+	}
+	.main_carousel_slides .main_carousel_slide {
+    max-width: 960px;
+	}
+} /* lg */
+
+@media screen and (max-width: 991.98px) {
+	.main_carousel, .open_category_or_item {
+    height: 250px;
+	}
+	.main_carousel_slides .main_carousel_slide {
+    max-width: 720px;
+		margin: 0 4px;
+	}
+} /* md */
+
+@media screen and (max-width: 767.98px) {
+	.main_carousel, .open_category_or_item {
+    height: 200px;
+	}
+	.main_carousel_slides .main_carousel_slide {
+    max-width: 540px;
+		margin: 0 4px;
+	}
+} /* sm */
+
+@media screen and (max-width: 575.98px) {
+	.main_carousel, .open_category_or_item {
+    height: auto !important;
+	}
+	.main_carousel, .open_category_or_item img {
+    max-width: 100%;
+    width: auto !important;
+    height: auto !important;
+    max-height: none;
+	}
+	.main_carousel_slides .main_carousel_slide {
+    max-width: 345px;
+    margin: 0 4px;
+	}
+} /* xs */
